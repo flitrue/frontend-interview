@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>垂直水平居中</title>
+  <style>
+    .parent1 {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      border: 1px solid #0944e6;
+    }
+
+    .child1 {
+      width: 200px;
+      height: 100px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-top: -50px;
+      /* 高度的一半 */
+      margin-left: -100px;
+      /* 宽度的一半 */
+      background-color: #10cf86;
+    }
+
+    .parent2 {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      border: 1px solid #0944e6;
+    }
+
+    .child2 {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      background-color: #10cf86;
+    }
+
+    .parent3 {
+      width: 300px;
+      height: 300px;
+      border: 1px solid #0944e6;
+    }
+
+    .child3 {
+      position: relative;
+      width: 80px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #10cf86;
+    }
+
+    .parent4 {
+      width: 300px;
+      height: 300px;
+      border: 1px solid #0944e6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .child4 {
+      background-color: #10cf86;
+    }
+
+    .parent5 {
+      width: 300px;
+      height: 300px;
+      border: 1px solid #0944e6;
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .child5 {
+      background-color: #10cf86;
+    }
+  </style>
+</head>
+
+<body>
+  <p># 固定宽高</p>
+  <p>1. 定位 + margin-top + margin-lefts</p>
+  <div class="parent1">
+    <div class="child1"></div>
+  </div>
+  <p>2. 定位 + margin</p>
+  <div class="parent2">
+    <div class="child2"></div>
+  </div>
+
+  <p># 未知宽高</p>
+  <p>1. transform：块级元素</p>
+  <div class="parent3">
+    <div class="child3">hello world</div>
+  </div>
+  <p>2. flexbox</p>
+  <div class="parent4">
+    <div class="child4">hello world</div>
+  </div>
+  <p>3. table-cell</p>
+  <div class="parent5">
+    <div class="child5">hello world</div>
+  </div>
+
+</body>
+
+</html>
