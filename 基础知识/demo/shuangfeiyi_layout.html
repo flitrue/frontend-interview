@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>双飞翼布局</title>
+  <style>
+    html, body, .app {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header, .footer {
+      background: rgba(29, 27, 27, 0.726);
+      text-align: center;
+      height: 60px;
+      line-height: 60px;
+    }
+
+    .container{
+      width: 100%;
+      height: 100%;
+      background-color: gray;
+      overflow: hidden;
+    }
+
+    .center {
+      background-color: red;
+      width: 100%;
+      height: 100%;
+      float: left;
+      overflow: hidden;
+    }
+
+    .left {
+      background-color: yellow;
+      width: 200px;
+      height: 100%;
+      float: left;
+      margin-left: -100%;
+    }
+
+    .right {
+      background-color: blue;
+      width: 200px;
+      height: 100%;
+      margin-left: -200px;
+      float: left;
+    }
+
+    .main {
+      padding: 0 200px;
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="header"></div>
+    <div class="container">
+      <div class="center">
+        <div class="main">
+          <div>双飞翼布局</div>
+          <div>双飞翼布局</div>
+          <div>双飞翼布局</div>
+          <div>双飞翼布局</div>
+          <div>双飞翼布局</div>
+          <div>双飞翼布局</div>
+          <div>双飞翼布局</div>
+          <div>双飞翼布局</div>
+          <div>双飞翼布局</div>
+          <div>双飞翼布局</div>
+          <div>双飞翼布局</div>
+        </div>
+      </div>
+      <div class="left"></div>
+      <div class="right"></div>
+    </div>
+    <div class="footer"></div>
+  </div>
+</body>
+</html>
